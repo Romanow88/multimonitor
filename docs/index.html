@@ -11,16 +11,20 @@
     if('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js');
     }
+
+    function getRandomIntInclusive(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
     function testButton() {
-      fetch("data.json").finally(() => {
-        console.log("Fetch finished")
-      })
+      moveTo(getRandomIntInclusive(0, screen.availWidth), getRandomIntInclusive(0, screen.availHeight))
     }
   </script>
 </head>
 <body>
 
-<button id="test" onclick="testButton()">Click me</button>
+<button id="test" onclick="testButton()">Resize me</button>
 
 </body>
 </html>
