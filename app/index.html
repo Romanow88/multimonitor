@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multi-monitor app</title>
+  <script type="application/javascript">
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }
+    function testButton() {
+      fetch("/data.json").finally(() => {
+        console.log("Fetch finished")
+      })
+    }
+  </script>
+</head>
+<body>
+
+<button id="test">Click me</button>
+
+</body>
+</html>
