@@ -20,11 +20,15 @@
     function testButton() {
       moveTo(getRandomIntInclusive(0, screen.availWidth), getRandomIntInclusive(0, screen.availHeight))
     }
+    function openNewWindow() {
+      window.open(".")
+    }
   </script>
 </head>
 <body>
 
 <button id="test" onclick="testButton()">Resize me</button>
+<button id="test2" onclick="openNewWindow()">Open window</button>
 
 </body>
 </html>
