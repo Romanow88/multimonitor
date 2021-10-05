@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Multi-monitor app</title>
+  <link rel="manifest" href="manifest.json">
   <script type="application/javascript">
     if('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./sw.js');
     }
     function testButton() {
-      fetch("/data.json").finally(() => {
+      fetch("data.json").finally(() => {
         console.log("Fetch finished")
       })
     }
